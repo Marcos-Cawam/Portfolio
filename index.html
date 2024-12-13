@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     
     <link rel="stylesheet" href="preloader.css">    
-    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="/styles/sass/style.css">    
+    <link rel="stylesheet" href="/styles/sass/style.sass">    
     <title>Portfolio</title>
 </head>
 <body>
@@ -21,54 +22,86 @@
 
     <main>
         <section> <!--APRESENTATION-->
-            <h1>Bem vindo(a) <br>ME CHAMO MARCOS</br></h1>
-            <h2>DESENVOLVEDOR WEB<br>FRONT-END</h2>
+            <div class="apresentation">
+                <h1>Bem vindo(a)</h1>
+                <h2>ME CHAMO MARCOS</h2>
+                <p>DESENVOLVEDOR WEB<br>FRONT-END</p>
+                <img src="assets/marcos.png" alt="Marcos">
+            </div>
         </section>
 
         <section id="about"> <!--ABOUT-->
-            <h2>SOBRE MIM</h2>
-            <p>ME CHAMO MARCOS, TENHO 19 ANOS, SOU DESENVOLVEDOR WEB 
-                COM UMA PAIXÃO POR TECNOLOGIA E INOVAÇÃO. DESDE CEDO, 
-                SEMPRE FUI FASCINADO POR TECNOLOGIA E PELA 
-                MANEIRA COMO ELA PODE TRANSFORMAR O COTIDIANO.
-                 ALÉM DISSO, ESTOU SEMPRE BUSCANDO DESAFIOS
-                QUE POSSAM AJUDAR NO MEU CRESCIMENTO
-                COMO PROFISSIONAL
-                </p>
-            <a href="" target="_blank">ENTRE EM CONTATO</a> <!--VAI DIRETO PARA O WHATSAPP-->
+            <div class="about">
+                <h2>SOBRE MIM</h2>
+                <div class="about-text">
+
+                    <p>ME CHAMO MARCOS, TENHO 19 ANOS, SOU DESENVOLVEDOR WEB 
+                        COM UMA PAIXÃO POR TECNOLOGIA E INOVAÇÃO. DESDE CEDO, 
+                        SEMPRE FUI FASCINADO POR TECNOLOGIA E PELA 
+                        MANEIRA COMO ELA PODE TRANSFORMAR O COTIDIANO.
+                        ALÉM DISSO, ESTOU SEMPRE BUSCANDO DESAFIOS
+                        QUE POSSAM AJUDAR NO MEU CRESCIMENTO
+                        COMO PROFISSIONAL
+                    </p>
+                    <a href="" target="_blank">ENTRE EM CONTATO</a> <!--VAI DIRETO PARA O WHATSAPP-->
+                </div>
+            </div>
         </section>
 
         <section><!--PROJECTS-->
-            <h2>MEUS PROJETOS</h2>
-            <H3>EM CONSTRUÇÃO</H3>
-            <p>VEJA MAIS</p>
+            <div class="project">
+                <div class="project-text">
+                    <h2>MEUS PROJETOS</h2>
+                    <H3>EM CONSTRUÇÃO...</H3>
+                </div>
+                <p>VEJA MAIS</p>      
+            </div>
         </section>
 
         <section><!--TECHNOLOGIES-->
-            <h2>TECNOLOGIAS</h2>
-            <img src="assets/icons/bootstrap.png">
-            <p>BOOTSTRAP</p>
-            <img src="assets/icons/css.png">
-            <p>CSS</p>
-            <img src="assets/icons/js.png">
-            <p>JAVASCRIPT</p>
-            <img src="assets/icons/php.png">
-            <p>PHP</p>
-        </section>
+            <div class="technologies">
+            <div class="technologies-title">
+                <h2>TECNOLOGIAS</h2>
+            </div>
 
+                <img src="assets/icons/bootstrap.png">
+                <div class="technologies-text">
+                    <p>BOOTSTRAP</p>
+                </div>
+
+                <img src="assets/icons/css.png">
+                <div class="technologies-text">
+                    <p>CSS</p>
+
+                </div>
+
+                <img src="assets/icons/js.png">
+                <div class="technologies-text">
+                    <p>JAVASCRIPT</p>
+
+                </div>
+                
+                <img src="assets/icons/php.png">
+                <div class="technologies-text">
+                    <p>PHP</p>
+                    
+                </div>
+            </div>
+            </section>
+            
         <section id="services"> <!--SERVICES-->
             <h2>O QUE EU FAÇO?</h2>
 
             <img src="assets/design.png" alt="">
             <p><strong>Design Gráfico</strong><br>
-                Criação visual criativa e personalizada para destacar sua marca. (Design 3D, Social Media...)</p>
+                Criação visual criativa e personalizada para destacar sua marca.</p>
 
             <img src="assets/web.png" alt="">
             <p><strong>Desenvolvimento Web</strong><br>
                 Criação de sites modernos, rápidos e responsivos.
             </p>
 
-            <img src="assets/marcos.png" alt="Marcos">
+            
         </section>
     </main>
     <footer id="contact">
