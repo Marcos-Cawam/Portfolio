@@ -7,3 +7,78 @@
     font-family:inter;
     font-weight: bold;
 }
+
+a,ul{
+    text-decoration: none;
+    list-style: none;
+    color: #000;
+}
+
+body{
+    background: linear-gradient(to bottom, #fff,#E5E6E4,#858585);
+}
+
+
+/*HEADER*/
+.nav-text{
+    display: flex;
+    justify-content: flex-end;
+    .nav-item{
+        padding: 1rem;
+    }
+}
+
+/*END*/
+
+/*APRESENTATION*/
+.apresentation{
+    margin: 3%;
+    .apresentation-items{
+        display: flex;
+        .apresentation-text{
+            padding-right: 19%;
+        }
+    }
+    .transparent{
+        opacity: 0.5;
+    }
+    h1{
+    font-weight: 300;
+    font-size: 2rem;
+    }
+    h2{
+        font-size: 4rem;
+        display: inline-block;
+        border-bottom: 1px solid black ;
+        padding-right: 2px;
+    }
+    p{
+        color: #FF0707;
+        font-size: 2rem;
+    }
+}
+/*END*/
+
+//
+
+
+//ABOUT
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3%;
+    .about-text{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h2{
+        font-size: 4rem
+    }
+    p{
+        font-weight: 400;
+        width: 50%;
+    }
+}
+//END
