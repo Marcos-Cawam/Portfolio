@@ -24,10 +24,9 @@ body{
     display: flex;
     justify-content: flex-end;
     .nav-item{
-        padding: 1rem;
-    }
+        padding: 1%/*top*/ 4%/*right*/ 1%/*bottom*/ 1%/*left*/;
 }
-
+}
 /*END*/
 
 /*APRESENTATION*/
@@ -75,10 +74,29 @@ body{
     }
     h2{
         font-size: 4rem
+        margin: 2%;
     }
     p{
-        font-weight: 400;
+        font-weight: 500;
         width: 50%;
     }
+    a{
+        color: rgb(255, 255, 255); /* Cor do texto */
+        background-color: #515151;
+        border-radius: 8px; /* Cantos arredondados */
+        padding: 12px 24px; /* Espaçamento interno */
+        font-size: 16px; /* Tamanho da fonte */
+        font-weight: bold; /* Texto destacado */
+        transition: all 0.3s ease; /* Animação suave */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    }
+    a:hover{
+        background-color: #2b2b2b;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); /* Aumentar sombra */
+        transform: translateY(-3px); /* Elevar botão */
+    }
+.about-content{
+    margin: 3%;
+}
 }
 //END
