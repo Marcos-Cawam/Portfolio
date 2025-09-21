@@ -1,9 +1,8 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
-  font-family: inter;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
 }
 
@@ -13,11 +12,27 @@ a, ul {
   color: #000;
 }
 
-body {
-  background: linear-gradient(to bottom, #fff, #E5E6E4, #858585);
+.card {
+  background: linear-gradient(to bottom, rgba(240, 240, 240, 0.6588235294), #999898);
+  width: 9.375rem;
+  height: 9.375rem;
+  border-radius: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
 }
 
-/*HEADER*/
+body {
+  background: linear-gradient(to bottom, #fff, #E5E6E4, #858585);
+  font-size: 100%;
+}
+
 .nav-text {
   display: flex;
   justify-content: flex-end;
@@ -26,8 +41,6 @@ body {
   padding: 1% 4% 1% 1%;
 }
 
-/*END*/
-/*APRESENTATION*/
 .apresentation {
   margin: 3%;
 }
@@ -47,15 +60,14 @@ body {
 .apresentation h2 {
   font-size: 4rem;
   display: inline-block;
-  border-bottom: 1px solid black;
-  padding-right: 2px;
+  border-bottom: 0.0625rem solid black;
+  padding-right: 0.125rem;
 }
 .apresentation p {
   color: #FF0707;
   font-size: 2rem;
 }
 
-/*END*/
 .about {
   display: flex;
   flex-wrap: wrap;
@@ -69,26 +81,145 @@ body {
 }
 .about h2 {
   font-size: 4rem;
+  margin: 2%;
 }
 .about p {
   font-weight: 500;
   width: 50%;
 }
 .about a {
-  color: rgb(255, 255, 255); /* Cor do texto */
+  color: #fff;
   background-color: #515151;
-  border-radius: 8px; /* Cantos arredondados */
-  padding: 12px 24px; /* Espaçamento interno */
-  font-size: 16px; /* Tamanho da fonte */
-  font-weight: bold; /* Texto destacado */
-  transition: all 0.3s ease; /* Animação suave */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.2);
 }
 .about a:hover {
   background-color: #2b2b2b;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); /* Aumentar sombra */
-  transform: translateY(-3px); /* Elevar botão */
+  box-shadow: 0 0.375rem 0.625rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.1875rem);
 }
 .about .about-content {
   margin: 3%;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  background-color: #515151;
+}
+.project h2 {
+  color: #fff;
+  font-size: 4rem;
+}
+.project .conteiner {
+  padding: 1.25rem;
+  text-align: center;
+}
+.project .cards {
+  display: flex;
+  justify-content: center;
+  gap: 5.25rem;
+  margin-top: 1.25rem;
+}
+.project .cards .card {
+  background-color: #ddd;
+  width: 13.375rem;
+  height: 11.375rem;
+  border-radius: 0.9375rem;
+}
+
+.technologies .technologies-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  font-size: 3rem;
+}
+.technologies .conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 3rem;
+}
+.technologies .conteiner img {
+  max-width: 60%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.services {
+  background-color: #515151;
+}
+.services .conteiner {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem;
+  flex-direction: column;
+  margin-top: 1.25rem;
+}
+.services .conteiner .cards {
+  display: flex;
+  gap: 8rem;
+  margin-top: 1.25rem;
+}
+.services .conteiner .card {
+  width: 14.375rem;
+  background: linear-gradient(to bottom, #808080, #808080);
+  height: 12.375rem;
+}
+.services .conteiner .card img {
+  width: 5rem;
+}
+.services p, .services h2 {
+  color: #fff;
+}
+.services p {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 9rem;
+  font-size: 0.8rem;
+}
+.services h2 {
+  font-size: 4rem;
+}
+
+footer .contact {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  margin-top: 1rem;
+}
+footer .contact .conteiner {
+  display: flex;
+  flex-direction: column;
+}
+footer .contact .conteiner p, footer .contact .conteiner a {
+  margin: 0.3rem;
+}
+footer .contact .contact-button {
+  margin-top: 2rem;
+}
+footer .contact .contact-button a {
+  color: #fff;
+  background-color: #515151;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.2);
+}
+footer .contact .contact-button a:hover {
+  background-color: #2b2b2b;
+  box-shadow: 0 0.375rem 0.625rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.1875rem);
+}
+footer .contact .links li {
+  gap: 1rem;
+  margin: 0.3rem;
 }/*# sourceMappingURL=style.css.map */
