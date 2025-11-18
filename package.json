@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Portfolio pessoal",
   "scripts": {
-    "build": "echo 'No build needed'"
+    "build": "node build.js"
   }
 }
 
