@@ -41,22 +41,60 @@ body {
   max-width: 100vw;
 }
 
+header {
+  width: 100%;
+  padding: 1rem;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .nav-text {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 .nav-text .nav-item {
-  padding: 1% 4% 1% 1%;
+  padding: 0.5rem 1rem;
+}
+.nav-text .nav-item a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-text .nav-item a:hover {
+  color: #FF0707;
 }
 
 .apresentation {
   margin: 3%;
+  width: 100%;
 }
 .apresentation .apresentation-items {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 .apresentation .apresentation-items .apresentation-text {
   padding-right: 19%;
+  flex: 1;
+  min-width: 300px;
+}
+.apresentation .apresentation-items img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  margin-left: auto;
+  margin-right: 5%;
+  flex-shrink: 0;
 }
 .apresentation .transparent {
   opacity: 0.5;
@@ -78,22 +116,34 @@ body {
 
 .about {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   margin: 3%;
+  width: 100%;
+  text-align: center;
 }
 .about .about-text {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
 }
 .about h2 {
   font-size: 4rem;
-  margin: 2%;
+  margin: 2% auto;
+  width: 100%;
+  text-align: center;
 }
 .about p {
   font-weight: 500;
   width: 50%;
+  text-align: left;
+  line-height: 1.6;
 }
 .about a {
   color: #fff;
@@ -251,6 +301,9 @@ footer .contact .links li {
 
 /* Tablets e telas médias (até 1024px) */
 @media (max-width: 1024px) {
+  .nav-text {
+    justify-content: center;
+  }
   .apresentation {
     margin: 2%;
   }
@@ -265,9 +318,16 @@ footer .contact .links li {
     width: 100%;
     margin-bottom: 2rem;
   }
+  .apresentation h1,
+  .apresentation h2,
+  .apresentation p {
+    text-align: center;
+  }
   .apresentation .apresentation-items img {
     max-width: 100%;
     height: auto;
+    margin-right: 0;
+    margin-left: 0;
   }
   .apresentation h1 {
     font-size: clamp(1.2rem, 4vw, 2rem);
@@ -285,15 +345,24 @@ footer .contact .links li {
     font-size: clamp(2rem, 6vw, 4rem);
     margin: 1rem;
   }
+  .about {
+    text-align: center;
+  }
   .about .about-text {
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+    justify-content: center;
   }
   .about .about-text p {
     width: 100%;
     text-align: center;
     padding: 0 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .about .about-text a {
+    margin: 0 auto;
   }
   .project h2 {
     font-size: clamp(2rem, 6vw, 4rem);
@@ -339,14 +408,28 @@ footer .contact .links li {
 
 /* Tablets pequenos e mobile grande (até 768px) */
 @media (max-width: 768px) {
+  header {
+    padding: 0.5rem;
+  }
   .nav-text {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.5rem;
+    width: 100%;
   }
   .nav-text .nav-item {
     padding: 0.5rem 1rem;
+  }
+  .apresentation h1,
+  .apresentation h2,
+  .apresentation p {
+    text-align: center;
+    width: 100%;
+  }
+  .apresentation h2 {
+    display: block;
+    margin: 0 auto;
   }
   .apresentation {
     margin: 1.5rem;
@@ -432,11 +515,29 @@ footer .contact .links li {
 
 /* Mobile pequeno (até 480px) */
 @media (max-width: 480px) {
+  header {
+    padding: 0.5rem;
+  }
+  .nav-text {
+    justify-content: center;
+    width: 100%;
+  }
   .nav-text .nav-item {
     padding: 0.4rem 0.8rem;
   }
   .nav-text .nav-item a {
     font-size: 0.9rem;
+  }
+  .apresentation h1,
+  .apresentation h2,
+  .apresentation p {
+    text-align: center;
+    width: 100%;
+  }
+  .apresentation h2 {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
   }
   .apresentation {
     margin: 1rem;

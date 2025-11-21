@@ -43,24 +43,65 @@ body {
 }
 
 // HEADER
+header {
+  width: 100%;
+  padding: 1rem;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .nav-text {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 
   .nav-item {
-    padding: 1% 4% 1% 1%;
+    padding: 0.5rem 1rem;
+    
+    a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: #FF0707;
+      }
+    }
   }
 }
 
 // APRESENTATION
 .apresentation {
   margin: 3%;
+  width: 100%;
 
   .apresentation-items {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
 
     .apresentation-text {
       padding-right: 19%;
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      width: auto;
+      margin-left: auto;
+      margin-right: 5%;
+      flex-shrink: 0;
     }
   }
 
@@ -89,24 +130,36 @@ body {
 // ABOUT
 .about {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   margin: 3%;
+  width: 100%;
+  text-align: center;
 
   .about-text {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
   }
 
   h2 {
     font-size: 4rem;
-    margin: 2%;
+    margin: 2% auto;
+    width: 100%;
+    text-align: center;
   }
 
   p {
     font-weight: 500;
     width: 50%;
+    text-align: left;
+    line-height: 1.6;
   }
 
   a {
@@ -277,8 +330,19 @@ footer{
   }
 }
 
+// Ajustes para telas médias (até 1200px)
+@media (max-width: 1200px) {
+  .apresentation .apresentation-items .apresentation-text {
+    padding-right: 5%;
+  }
+}
+
 // Tablets e telas médias (até 1024px)
 @media (max-width: 1024px) {
+  .nav-text {
+    justify-content: center;
+  }
+  
   .apresentation {
     margin: 2%;
     
@@ -291,7 +355,12 @@ footer{
         padding-right: 0;
         text-align: center;
         width: 100%;
+        margin-bottom: 2rem;
       }
+    }
+    
+    h1, h2, p {
+      text-align: center;
     }
     
     h1 {
@@ -314,6 +383,7 @@ footer{
   
   .about {
     margin: 2%;
+    text-align: center;
     
     h2 {
       font-size: clamp(2rem, 6vw, 4rem);
@@ -324,11 +394,18 @@ footer{
       flex-direction: column;
       gap: 2rem;
       align-items: center;
+      justify-content: center;
       
       p {
         width: 100%;
         text-align: center;
         padding: 0 1rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      a {
+        margin: 0 auto;
       }
     }
   }
@@ -394,11 +471,16 @@ footer{
 
 // Tablets pequenos e mobile grande (até 768px)
 @media (max-width: 768px) {
+  header {
+    padding: 0.5rem;
+  }
+  
   .nav-text {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.5rem;
+    width: 100%;
     
     .nav-item {
       padding: 0.5rem 1rem;
@@ -407,6 +489,16 @@ footer{
   
   .apresentation {
     margin: 1.5rem;
+    
+    h1, h2, p {
+      text-align: center;
+      width: 100%;
+    }
+    
+    h2 {
+      display: block;
+      margin: 0 auto;
+    }
     
     h1 {
       font-size: clamp(1rem, 5vw, 1.5rem);
@@ -519,7 +611,14 @@ footer{
 
 // Mobile pequeno (até 480px)
 @media (max-width: 480px) {
+  header {
+    padding: 0.5rem;
+  }
+  
   .nav-text {
+    justify-content: center;
+    width: 100%;
+    
     .nav-item {
       padding: 0.4rem 0.8rem;
       
@@ -531,6 +630,17 @@ footer{
   
   .apresentation {
     margin: 1rem;
+    
+    h1, h2, p {
+      text-align: center;
+      width: 100%;
+    }
+    
+    h2 {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
     
     h1 {
       font-size: clamp(0.9rem, 6vw, 1.2rem);
