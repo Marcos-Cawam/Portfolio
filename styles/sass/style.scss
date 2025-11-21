@@ -5,6 +5,12 @@
   padding: 0;
   font-family: 'Inter', sans-serif;
   font-weight: bold;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 a, ul {
@@ -32,6 +38,8 @@ a, ul {
 body {
   background: linear-gradient(to bottom, #fff, #E5E6E4, #858585);
   font-size: 100%; // base de 16px (1rem)
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 // HEADER
@@ -257,4 +265,407 @@ footer{
             }
         }
     }    
+}
+
+// MEDIA QUERIES - RESPONSIVIDADE
+
+// Desktop grande (acima de 1400px) - manter layout original
+@media (min-width: 1400px) {
+  .apresentation .apresentation-items {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+// Tablets e telas médias (até 1024px)
+@media (max-width: 1024px) {
+  .apresentation {
+    margin: 2%;
+    
+    .apresentation-items {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      
+      .apresentation-text {
+        padding-right: 0;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    
+    h1 {
+      font-size: clamp(1.2rem, 4vw, 2rem);
+    }
+    
+    h2 {
+      font-size: clamp(2rem, 6vw, 4rem);
+    }
+    
+    p {
+      font-size: clamp(1.2rem, 3vw, 2rem);
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  .about {
+    margin: 2%;
+    
+    h2 {
+      font-size: clamp(2rem, 6vw, 4rem);
+      margin: 1rem;
+    }
+    
+    .about-text {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      
+      p {
+        width: 100%;
+        text-align: center;
+        padding: 0 1rem;
+      }
+    }
+  }
+  
+  .project {
+    h2 {
+      font-size: clamp(2rem, 6vw, 4rem);
+    }
+    
+    .cards {
+      gap: 2rem;
+      flex-wrap: wrap;
+      
+      .card {
+        width: clamp(10rem, 25vw, 13.375rem);
+        height: clamp(9rem, 22vw, 11.375rem);
+      }
+    }
+  }
+  
+  .technologies {
+    .technologies-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-top: 2rem;
+    }
+    
+    .conteiner {
+      gap: 2rem;
+      flex-wrap: wrap;
+      
+      .card {
+        width: clamp(7rem, 18vw, 9.375rem);
+        height: clamp(7rem, 18vw, 9.375rem);
+      }
+    }
+  }
+  
+  .services {
+    .conteiner {
+      h2 {
+        font-size: clamp(2rem, 6vw, 4rem);
+      }
+      
+      .cards {
+        gap: 3rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        .card {
+          width: clamp(12rem, 30vw, 14.375rem);
+          height: clamp(11rem, 28vw, 12.375rem);
+        }
+      }
+    }
+  }
+  
+  footer .contact {
+    gap: 4rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+}
+
+// Tablets pequenos e mobile grande (até 768px)
+@media (max-width: 768px) {
+  .nav-text {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    
+    .nav-item {
+      padding: 0.5rem 1rem;
+    }
+  }
+  
+  .apresentation {
+    margin: 1.5rem;
+    
+    h1 {
+      font-size: clamp(1rem, 5vw, 1.5rem);
+    }
+    
+    h2 {
+      font-size: clamp(1.5rem, 8vw, 2.5rem);
+    }
+    
+    p {
+      font-size: clamp(1rem, 4vw, 1.5rem);
+    }
+  }
+  
+  .about {
+    margin: 1.5rem;
+    
+    h2 {
+      font-size: clamp(1.5rem, 8vw, 2.5rem);
+    }
+    
+    .about-text {
+      p {
+        font-size: clamp(0.85rem, 3vw, 1rem);
+      }
+      
+      a {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+  
+  .project {
+    .conteiner {
+      padding: 1rem;
+    }
+    
+    h2 {
+      font-size: clamp(1.5rem, 8vw, 2.5rem);
+    }
+    
+    .cards {
+      gap: 1.5rem;
+      
+      .card {
+        width: clamp(8rem, 40vw, 12rem);
+        height: clamp(7rem, 35vw, 10rem);
+      }
+    }
+  }
+  
+  .technologies {
+    .technologies-title {
+      font-size: clamp(1.5rem, 6vw, 2.5rem);
+    }
+    
+    .conteiner {
+      gap: 1.5rem;
+      margin-top: 1rem;
+      
+      .card {
+        width: clamp(6rem, 25vw, 8rem);
+        height: clamp(6rem, 25vw, 8rem);
+      }
+    }
+  }
+  
+  .services {
+    .conteiner {
+      padding: 1rem;
+      
+      h2 {
+        font-size: clamp(1.5rem, 8vw, 2.5rem);
+      }
+      
+      .cards {
+        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+        
+        .card {
+          width: clamp(10rem, 80vw, 14rem);
+          height: clamp(9rem, 70vw, 12rem);
+        }
+      }
+    }
+  }
+  
+  footer .contact {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    text-align: center;
+    
+    .conteiner {
+      align-items: center;
+    }
+    
+    .links {
+      text-align: center;
+    }
+    
+    .contact-button a {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// Mobile pequeno (até 480px)
+@media (max-width: 480px) {
+  .nav-text {
+    .nav-item {
+      padding: 0.4rem 0.8rem;
+      
+      a {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  
+  .apresentation {
+    margin: 1rem;
+    
+    h1 {
+      font-size: clamp(0.9rem, 6vw, 1.2rem);
+    }
+    
+    h2 {
+      font-size: clamp(1.2rem, 10vw, 1.8rem);
+    }
+    
+    p {
+      font-size: clamp(0.9rem, 5vw, 1.2rem);
+    }
+  }
+  
+  .about {
+    margin: 1rem;
+    
+    h2 {
+      font-size: clamp(1.2rem, 10vw, 1.8rem);
+    }
+    
+    .about-text {
+      p {
+        font-size: clamp(0.75rem, 4vw, 0.9rem);
+        line-height: 1.5;
+      }
+      
+      a {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+      }
+    }
+  }
+  
+  .project {
+    .conteiner {
+      padding: 0.8rem;
+    }
+    
+    h2 {
+      font-size: clamp(1.2rem, 10vw, 1.8rem);
+    }
+    
+    .cards {
+      gap: 1rem;
+      
+      .card {
+        width: clamp(7rem, 70vw, 10rem);
+        height: clamp(6rem, 60vw, 9rem);
+      }
+    }
+  }
+  
+  .technologies {
+    .technologies-title {
+      font-size: clamp(1.2rem, 8vw, 1.8rem);
+      margin-top: 1.5rem;
+    }
+    
+    .conteiner {
+      gap: 1rem;
+      
+      .card {
+        width: clamp(5rem, 35vw, 7rem);
+        height: clamp(5rem, 35vw, 7rem);
+      }
+    }
+  }
+  
+  .services {
+    .conteiner {
+      padding: 0.8rem;
+      
+      h2 {
+        font-size: clamp(1.2rem, 10vw, 1.8rem);
+      }
+      
+      .cards {
+        gap: 1.5rem;
+        
+        .card {
+          width: clamp(9rem, 85vw, 12rem);
+          height: clamp(8rem, 75vw, 11rem);
+          
+          img {
+            width: 4rem;
+          }
+        }
+      }
+      
+      p {
+        font-size: clamp(0.7rem, 3vw, 0.85rem);
+        width: 100%;
+      }
+    }
+  }
+  
+  footer .contact {
+    gap: 1.5rem;
+    padding: 0.8rem;
+    
+    .conteiner {
+      p, a {
+        font-size: clamp(0.8rem, 3vw, 0.9rem);
+        margin: 0.2rem;
+      }
+    }
+    
+    .contact-button a {
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+    }
+  }
+}
+
+// Melhorias gerais de responsividade
+@media (max-width: 1200px) {
+  .apresentation .apresentation-items .apresentation-text {
+    padding-right: 5%;
+  }
+}
+
+// Ajustes para telas muito pequenas (até 320px)
+@media (max-width: 320px) {
+  * {
+    font-size: 14px;
+  }
+  
+  .apresentation h2 {
+    font-size: 1.2rem;
+  }
+  
+  .about h2,
+  .project h2,
+  .services .conteiner h2 {
+    font-size: 1.2rem;
+  }
 }

@@ -1,7 +1,0 @@
-# Redirects para Cloudflare Pages
-# Se você tiver rotas SPA, adicione aqui
-
-# Exemplo: redirecionar todas as rotas não encontradas para index.html
-# /blog/*  /blog/index.html  200
-
-
